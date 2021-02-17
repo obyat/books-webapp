@@ -1,14 +1,26 @@
 import * as api from '../api';
-//Action Creators
-const apix = require('../api');
-export const getPosts = () => async(dispatch) => {
+
+
+export const getPosts = () => async (dispatch) => {
     try {
-        const {data} = await api.fetchPosts();
-        dispatch({type: 'Fetch_ALL', payload:[]});
+        const { data } = await api.fetchPosts();
+        dispatch({type: 'FETCH_ALL', payload: data});
     } catch (error) {
-        console.log(error.message);
+        console.log(error);
     }
 }
+
+// export const getPost = async (req, res) => { 
+//     const { id } = req.params;
+
+//     try {
+//         const post = await PostMessage.findById(id);
+        
+//         res.status(200).json(post);
+//     } catch (error) {
+//         res.status(404).json({ message: error.message });
+//     }
+// }
 
 export const createPost = (post) => async (dispatch) => {
     try {
@@ -18,4 +30,15 @@ export const createPost = (post) => async (dispatch) => {
     } catch (error) {
         console.log(error);
     }
+}
+
+export const updatePost = (id, post) => async (dispatch) => {
+    try {
+      const { data } = await api.updatePost(id, post);
+  
+      dispatch({ type: 'UPDATE', payload: data });
+    } catch (error) {
+      console.log(error);
+    }
+  
 }
