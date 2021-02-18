@@ -5,6 +5,7 @@ import PostMessage from '../models/postMessage.js';
 const router = express.Router();
 
 export const getPosts = async (req, res) => { 
+   // res.send('WROKED from controllers');
     try {
         const postMessages = await PostMessage.find();
                 
@@ -27,11 +28,15 @@ export const getPost = async (req, res) => {
 }
 
 export const createPost = async (req, res) => {
-    const { title, message, selectedFile, creator, tags } = req.body;
+    const {isbn, title, author, publication_year, publisher,
+        image_url_s, image_url_m, image_url_l, copies, available} = req.body;
 
-    const newPostMessage = new PostMessage({ title, message, selectedFile, creator, tags })
+    const newPostMessage = new PostMessage({ isbn, title, author, publication_year, publisher,
+        image_url_s, image_url_m, image_url_l, copies, available})
 
     try {
+//        res.send('WROKED from controllers');
+
         await newPostMessage.save();
 
         res.status(201).json(newPostMessage );
@@ -43,11 +48,13 @@ export const createPost = async (req, res) => {
 
 export const updatePost = async (req, res) => {
     const { id } = req.params;
-    const { title, message, creator, selectedFile, tags } = req.body;
+    const { isbn, title, author, publication_year, publisher,
+        image_url_s, image_url_m, image_url_l, copies, available} = req.body;
     
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
 
-    const updatedPost = { creator, title, message, tags, selectedFile, _id: id };
+    const updatedPost = { isbn, title, author, publication_year, publisher,
+        image_url_s, image_url_m, image_url_l, copies, available, _id: id };
 
     await PostMessage.findByIdAndUpdate(id, updatedPost, { new: true });
 
@@ -55,20 +62,55 @@ export const updatePost = async (req, res) => {
 }
 
 export const deletePost = async (req, res) => {
-    const {id} = req.params
-    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
-    await PostMessage.findByIdAndRemove(id);
-    console.log('REACHED THE DELETE LINE INSIDE OF CONTROLLERS POSTS DELETE');
-    res.json({message: 'posted deleted successfully'});
+    const {id} = req.params;
+    try {
+        if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+        await PostMessage.findByIdAndRemove(id);
+        res.json({message: 'posted deleted successfully'});
+        
+    } catch (error) {
+        console.log('REACHED THE DELETE LINE INSIDE OF CONTROLLERS POSTS DELETE');
+        
+    }
 }
 
 export const likePost = async (req, res) => {
-    const {id} = req.params
+    const {id} = req.params;
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
     
     const post = await PostMessage.findById(id);
-    const updatedPost = await PostMessage.findByIdAndUpdate(id, {likeCount: post.likeCount+1}, {new : true});
+    if (post.available > 0) {
+        alert("Hello! I am an alert box!");
+
+        console.log('There are :' + post.available + 'books available');
+    const updatedPost = await PostMessage.findByIdAndUpdate(id, {available: post.available - 1}, {new : true});
     res.json(updatedPost);
+
+} else{
+    try {
+        Window.alert("There are no available copies of that book! - confirm");
+
+        confirm("There are no available copies of that book! - confirm");
+
+        Window.confirm("There are no available copies of that book! - confirm");
+   
+        Window.alert("There are no available copies of that book! -alert");
+            
+    } catch (error) {
+        console.log("There are no available copies of that book! -console");
+        
+    }
+    }
+}
+
+export const returnBook = async (req, res) => {
+    const {id} = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
     
-    console.log('REACHED THE LIKE LINE INSIDE OF POSTS FROM CONTROLLER');
+    const post = await PostMessage.findById(id);
+    const updatedPost = await PostMessage.findByIdAndUpdate(id, { available: post.available + 1}, {new: true});
+    res.json(updatedPost);
+
+    console.long('Reached the returned line from return book in controllers')
+    
 }

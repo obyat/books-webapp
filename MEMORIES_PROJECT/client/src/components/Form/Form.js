@@ -13,7 +13,8 @@ const Form = ({currentId, setCurrentId }) => {
 
     const [postData, setPostData] = useState({
 
-        creator: '', title: '', message: '', tags: '', selectedFile: ''
+      isbn: '', title: '', author: '', publication_year: '', publisher: ''
+      ,image_url_s: '', image_url_m: '', image_url_l: '', copies: '', available: '' 
     });
     const classes = useStyles();
     
@@ -45,7 +46,9 @@ const Form = ({currentId, setCurrentId }) => {
 
   const clear = () => {
       setCurrentId(null);
-      setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
+      setPostData({isbn: '', title: '', author: '', publication_year: '', publisher: ''
+      ,image_url_s: '', image_url_m: '', image_url_l: '', copies: '', available: '' 
+ });
     };
 
 
@@ -53,13 +56,19 @@ return (
   //change to creater then title instead of title then event
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? `Editing "${post.title}"` : 'Creating a Memory'}</Typography>
-        <TextField name="Title" variant="outlined" label="Title" fullWidth value={postData.creator} onChange={(e) => setPostData({ ...postData, creator: e.target.value })} />
-        <TextField name="Event" variant="outlined" label="Event" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
-        <TextField name="message" variant="outlined" label="Message" fullWidth multiline rows={4} value={postData.message} onChange={(e) => setPostData({ ...postData, message: e.target.value })} />
-        <TextField name="tags" variant="outlined" label="Tags (coma separated)" fullWidth value={postData.tags} onChange={(e) => setPostData({ ...postData, tags: e.target.value.split(',') })} />
-        <div className={classes.fileInput}>
-          <FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>
+        <Typography variant="h6">{currentId ? `Editing "${post.title}"` : 'Add a Book'}</Typography>
+        <TextField name="isbn" variant="outlined" label="isbn" fullWidth value={postData.isbn} onChange={(e) => setPostData({ ...postData, isbn: e.target.value })} />
+        <TextField name="title" variant="outlined" label="title" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
+        <TextField name="author" variant="outlined" label="author" fullWidth value={postData.author} onChange={(e) => setPostData({ ...postData, author: e.target.value })} />
+        <TextField name="publication_year" variant="outlined" label="publication_year" fullWidth value={postData.publication_year} onChange={(e) => setPostData({ ...postData, publication_year: e.target.value })} />
+        
+        <TextField name="publisher" variant="outlined" label="publisher" fullWidth value={postData.publisher} onChange={(e) => setPostData({ ...postData, publisher: e.target.value })} />
+        <TextField name="image_url_s" variant="outlined" label="image_url_s" fullWidth value={postData.image_url_s} onChange={(e) => setPostData({ ...postData, image_url_s: e.target.value })} />
+        <TextField name="image_url_m" variant="outlined" label="image_url_m" fullWidth value={postData.image_url_m} onChange={(e) => setPostData({ ...postData, image_url_m: e.target.value })} />
+        <TextField name="image_url_l" variant="outlined" label="image_url_l" fullWidth value={postData.image_url_l} onChange={(e) => setPostData({ ...postData, image_url_l: e.target.value })} />
+        <TextField name="copies" variant="outlined" label="copies" fullWidth value={postData.copies} onChange={(e) => setPostData({ ...postData, copies: e.target.value })} />
+        <TextField name="available" variant="outlined" label="available" fullWidth value={postData.available} onChange={(e) => setPostData({ ...postData, available: e.target.value })} />
+        
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
       </form>

@@ -7,7 +7,7 @@ import ThumbUp from '@material-ui/icons/ThumbUp';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
-import { likePost, deletePost, updatePost } from '../../../actions/posts';
+import { likePost, deletePost, updatePost, returnBook } from '../../../actions/posts';
 import useStyles from './styles';
 const Post = ({ post, setCurrentId }) => {
   const dispatch = useDispatch();
@@ -15,9 +15,9 @@ const Post = ({ post, setCurrentId }) => {
 
   return (
     <Card className={classes.card}>
-      <CardMedia className={classes.media} image={post.selectedFile} title={post.title} />
+      <CardMedia className={classes.media} image={post.image_url_s} title={post.title} />
       <div className={classes.overlay}>
-        <Typography variant="h6">{post.creator}</Typography>
+        <Typography variant="h6">{post.title}</Typography>
         <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
       </div>
 
@@ -26,19 +26,23 @@ const Post = ({ post, setCurrentId }) => {
       </div>
       
       <div className={classes.details}>
-      <Typography variant="body2" color="textSecondary">{post.tags.map((tag)=> `#${tag} `)}</Typography>
+      <Typography variant="body2" color="textSecondary">{post.available}</Typography>
       </div>
-      <Typography className={classes.title} variant="h5" gutterBottom>{post.title }</Typography>
+      <Typography className={classes.title} variant="h5" gutterBottom>{post.author }</Typography>
       <CardContent>
-      <Typography variant="body2" color="textSecondary" component="p">{post.message}</Typography>
+      <Typography variant="body2" color="textSecondary" component="p">{post.publisher}</Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
         <Button size="small" color="primary" onClick={()=>dispatch(likePost(post._id))}>
-        <ThumbUp fontSize="small"/>
+        <BookIcon fontSize="small"/>
         &nbsp;
-         Like 
-        &nbsp;
-            [{post.likeCount}]
+         Borrow 
+        
+            [{post.available}]
+        </Button>
+        <Button size="small" color="primary" onClick={() => dispatch(returnBook(post._id))}>
+        <RestoreFromTrashIcon fontSize="small"/> 
+        Return &nbsp;
         </Button>
         <Button size="small" color="primary" onClick={() => dispatch(deletePost(post._id))}>
         <RestoreFromTrashIcon fontSize="small"/> 

@@ -1,9 +1,9 @@
 - backend -
-1. add router that patch the request
-2. import it from controller
-3. in controllers create export const ... function
+1. add router.patch for the request in routers & import it from controller inside routers
+2. in controllers create export const ... function
 - the front end -
 4. add api call in api index.js
 5. in actions create action function expost const ... function
 6. in reducers implement logic for the function in the switch statement 
 7. in the component import the function from actions , add onClick to dispatch the function with the object._id
+8. add constant
