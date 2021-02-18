@@ -80,29 +80,21 @@ export const likePost = async (req, res) => {
     
     const post = await PostMessage.findById(id);
     if (post.available > 0) {
-        alert("Hello! I am an alert box!");
-
-        console.log('There are :' + post.available + 'books available');
+    
+    console.log('There are: ' + post.available + ' books available');
     const updatedPost = await PostMessage.findByIdAndUpdate(id, {available: post.available - 1}, {new : true});
     res.json(updatedPost);
 
 } else{
-    try {
-        Window.alert("There are no available copies of that book! - confirm");
+    console.log("There are no available copies of that book! - catch clause console");
+        //alert("Meh");
+        //confirm("There are no available copies of that book! - confirm");
 
-        confirm("There are no available copies of that book! - confirm");
-
-        Window.confirm("There are no available copies of that book! - confirm");
+        // Window.confirm("There are no available copies of that book! - confirm");
    
-        Window.alert("There are no available copies of that book! -alert");
-            
-    } catch (error) {
-        console.log("There are no available copies of that book! -console");
-        
-    }
+        // Window.alert("There are no available copies of that book! -alert");
     }
 }
-
 export const returnBook = async (req, res) => {
     const {id} = req.params;
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);

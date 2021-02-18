@@ -1,9 +1,8 @@
 import React from 'react';
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core/';
-import RestoreFromTrashIcon from '@material-ui/icons/RestoreFromTrash';
-import BookIcon from '@material-ui/icons/Book';
-import DeleteIcon from '@material-ui/icons/Delete';
-import ThumbUp from '@material-ui/icons/ThumbUp';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';import BookIcon from '@material-ui/icons/Book';
+import AssignmentReturnedIcon from '@material-ui/icons/AssignmentReturned';
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
@@ -34,19 +33,18 @@ const Post = ({ post, setCurrentId }) => {
       </CardContent>
       <CardActions className={classes.cardActions}>
         <Button size="small" color="primary" onClick={()=>dispatch(likePost(post._id))}>
-        <BookIcon fontSize="small"/>
-        &nbsp;
+        <PhotoLibraryIcon fontSize="small"/>
          Borrow 
         
             [{post.available}]
         </Button>
         <Button size="small" color="primary" onClick={() => dispatch(returnBook(post._id))}>
-        <RestoreFromTrashIcon fontSize="small"/> 
+        <AssignmentReturnedIcon fontSize="small"/> 
         Return &nbsp;
         </Button>
-        <Button size="small" color="primary" onClick={() => dispatch(deletePost(post._id))}>
-        <RestoreFromTrashIcon fontSize="small"/> 
-        Delete &nbsp;
+        <Button size="small" color="primary" onClick={() => {}}>
+        <DeleteForeverIcon fontSize="small"/> 
+        Delete
         </Button>
       </CardActions>
     </Card>
