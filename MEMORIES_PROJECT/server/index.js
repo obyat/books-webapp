@@ -12,9 +12,9 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
 app.use('/posts', postRoutes);
-app.get('/', (req, res) => {
-  res.send('Hello to memories API');
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello to memories API');
+// })
 //mongodb
 //const CONNECTION_URL = 'mongodb+srv://teambird:teambird@cluster0.wv4az.mongodb.net/<dbname>?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
