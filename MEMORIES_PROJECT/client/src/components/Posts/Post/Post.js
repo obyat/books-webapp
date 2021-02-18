@@ -42,7 +42,7 @@ const Post = ({ post, setCurrentId }) => {
         <AssignmentReturnedIcon fontSize="small"/> 
         Return &nbsp;
         </Button>
-        <Button size="small" color="primary" onClick={() => {}}>
+        <Button size="small" color="primary" onClick={() => dispatch(returnBook(post._id))}>
         <DeleteForeverIcon fontSize="small"/> 
         Delete
         </Button>
@@ -50,4 +50,6 @@ const Post = ({ post, setCurrentId }) => {
     </Card>
   );
 };
+//        <Button size="small" color="primary" onClick={() => dispatch(deletePost(post._id))}>
+
 export default Post;
