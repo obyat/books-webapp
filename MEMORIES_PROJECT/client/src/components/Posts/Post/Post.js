@@ -4,20 +4,32 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever';import BookIcon
 import AssignmentReturnedIcon from '@material-ui/icons/AssignmentReturned';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import moment from 'moment';
 import { useDispatch } from 'react-redux';
 import { likePost, deletePost, updatePost, returnBook } from '../../../actions/posts';
 import useStyles from './styles';
+
+import 'react-toastify/dist/ReactToastify.css';
+//importing bear image
+
+import {toast} from 'react-toastify';
+
+toast.configure()
+
+
 const Post = ({ post, setCurrentId }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
-
+  const notify = () => {
+    toast.error('There are no available copies of that book!', {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 3000});
+}
   return (
     <Card className={classes.card}>
       <CardMedia className={classes.media} image={post.image_url_l} title={post.title} />
       <div className={classes.overlay}>
         <Typography variant="h6">{post.title}</Typography>
-        <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
+        <Typography variant="body2"> published on: {post.publication_year}</Typography>
       </div>
 
       <div className={classes.overlay2}>
@@ -32,7 +44,7 @@ const Post = ({ post, setCurrentId }) => {
       <Typography variant="body2" color="textSecondary" component="p">{post.publisher}</Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
-        <Button size="small" color="primary" onClick={()=>dispatch(likePost(post._id))}>
+        <Button size="small" color="primary" onClick={()=>{post.available > 0 ? dispatch(likePost(post._id)) : notify()}}>
         <PhotoLibraryIcon fontSize="small"/>
          Borrow 
         

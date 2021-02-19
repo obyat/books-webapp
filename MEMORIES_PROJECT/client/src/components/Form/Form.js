@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {TextField, Button, Typography, Paper} from '@material-ui/core';
 import useStyles from './styles';
-import FileBase from 'react-file-base64';
 import {useDispatch, useSelector} from 'react-redux';
 import {createPost, updatePost} from '../../actions/posts';
 
@@ -71,6 +70,17 @@ return (
         
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
+     
+        <button
+        onClick={() => {
+          alert.show("This is an alert with title!", {
+            title: "Random Alert Title"
+          });
+        }}
+      >
+        Alert with title
+      </button>
+     
       </form>
     </Paper>
   );

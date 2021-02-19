@@ -1,7 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import PostMessage from '../models/postMessage.js';
-
 const router = express.Router();
 
 export const getPosts = async (req, res) => { 
@@ -74,6 +73,7 @@ export const deletePost = async (req, res) => {
     }
 }
 
+
 export const likePost = async (req, res) => {
     const {id} = req.params;
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
@@ -86,13 +86,8 @@ export const likePost = async (req, res) => {
     res.json(updatedPost);
 
 } else{
-    console.log("There are no available copies of that book! - catch clause console");
-        //alert("Meh");
-        //confirm("There are no available copies of that book! - confirm");
 
-        // Window.confirm("There are no available copies of that book! - confirm");
-   
-        // Window.alert("There are no available copies of that book! -alert");
+    console.log("There are no available copies of that book! - catch clause console");
     }
 }
 export const returnBook = async (req, res) => {
