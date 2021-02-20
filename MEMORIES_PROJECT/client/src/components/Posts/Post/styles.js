@@ -1,6 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles({
+ 
+  posttitle: {
+    margin: '0px 0px 0px 0px',
+    fontSize: '20px',
+    fontFamily: 'Arial',
+  },
+
   media: {
     height: 0,
     paddingTop: '56.25%',
@@ -14,6 +21,7 @@ export default makeStyles({
     height: '100%',
   },
   card: {
+    // width: '10%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -23,14 +31,15 @@ export default makeStyles({
   },
   overlay: {
     position: 'absolute',
-    top: '20px',
+    top: '40px',
     left: '20px',
+    right: '30px',
     color: 'white',
   },
   overlay2: {
     position: 'absolute',
-    top: '20px',
-    right: '20px',
+    top: '10px',
+    right: '10px',
     color: 'white',
   },
   grid: {
@@ -39,14 +48,20 @@ export default makeStyles({
   details: {
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '20px',
+    margin: '10px 20px',
   },
   title: {
-    padding: '0 16px',
+    padding: '0px 16px',
   },
+  publish: {
+    margin: '-10px 0px 10px 1px',
+  },
+
+
   cardActions: {
     padding: '0 16px 8px 16px',
     display: 'flex',
     justifyContent: 'space-between',
   },
+  
 });
