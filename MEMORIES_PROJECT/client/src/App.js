@@ -7,11 +7,7 @@ import Form from './components/Form/Form';
 import useStyles from './styles';
 import{useDispatch} from 'react-redux';
 import memories from './images/memories.png'
-<<<<<<< HEAD
 import birdpic from './images/birdpic.png'
-=======
-
->>>>>>> 72ab7d088f0a4f46ab3d2e978294787513d1f0f8
 const App = () => {
     //if the current id is not selected make it null
 const [currentId, setCurrentId] = useState(null);    
@@ -26,17 +22,11 @@ useEffect(() => {
 
 return (
         <Container maxWidth="lg">
-            <AppBar className={classes.appBar} position="static" color="inherit">
-<<<<<<< HEAD
+            <AppBar className={classes.appBar} colorTransparent color="secondary">
             <img className={classes.image} src={birdpic} alt="birdpic" height = "60"/>
                 <Typography className={classes.heading}  variant="h2" align="center">Bird Coffee Shop Library</Typography>
                 
                
-=======
-               
-                <Typography className={classes.heading}  variant="h2" align="center">Obyat's coffee shop</Typography>
-                <img className={classes.image} src={memories} alt="memories" height = "60"/>
->>>>>>> 72ab7d088f0a4f46ab3d2e978294787513d1f0f8
             </AppBar>
             <Grow in>
                 <Container>

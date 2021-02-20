@@ -52,9 +52,8 @@ const Form = ({currentId, setCurrentId }) => {
 
 
 return (
-  //change to creater then title instead of title then event
     <Paper className={classes.paper}>
-      <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
+      <form autoComplete="off"  noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
         <Typography variant="h6">{currentId ? `Editing "${post.title}"` : 'Add a Book'}</Typography>
         <TextField name="isbn" variant="outlined" label="isbn" fullWidth value={postData.isbn} onChange={(e) => setPostData({ ...postData, isbn: e.target.value })} />
         <TextField name="title" variant="outlined" label="title" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
@@ -70,16 +69,7 @@ return (
         
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
-     
-        <button
-        onClick={() => {
-          alert.show("This is an alert with title!", {
-            title: "Random Alert Title"
-          });
-        }}
-      >
-        Alert with title
-      </button>
+
      
       </form>
     </Paper>
