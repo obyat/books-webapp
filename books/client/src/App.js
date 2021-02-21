@@ -1,8 +1,8 @@
 import React, {useState, useEffect } from "react";
 import {Container, AppBar, Typography, Grow, Grid, GridList, Button, Toolbar, IconButton, Drawer  } from "@material-ui/core";
-//importing posts from components
-import Posts from './components/Posts/Posts';
-import {getPosts} from './actions/posts'
+//importing books from components
+import Books from './components/Books/Books';
+import {getBooks} from './actions/books'
 import Form from './components/Form/Form';
 import useStyles from './styles';
 import{useDispatch} from 'react-redux';
@@ -26,7 +26,7 @@ const dispatch = useDispatch();
 
 
 useEffect(() => {
-    dispatch(getPosts());
+    dispatch(getBooks());
 }, [currentId, dispatch]);
 
 //            <AppBar className={classes.appBar} width="100%" color="secondary" position="relative">
@@ -83,7 +83,7 @@ return (
                         
                      
                         <Grid cols={ 3} direction='column' item xs={3} sm={8}>
-                            <Posts setCurrentId={setCurrentId}/>
+                            <Books setCurrentId={setCurrentId}/>
                         </Grid >
                     </Grid>
                 </Container>
@@ -92,6 +92,6 @@ return (
         </div>
     );
 }
-//to make books larger change Grid to GridList in Posts right here
+//to make books larger change Grid to GridList in Books right here
 
 export default App;

@@ -1,9 +1,9 @@
 import axios from 'axios';
-const url = "http://localhost:5000/posts";
+const url = "http://localhost:5000/books";
 
-export const fetchPosts = () => axios.get(url);
-export const createPost = (newPost) => axios.post(url, newPost);
-export const updatePost = (id, updatedPost) => axios.patch(`${url}/${id}`, updatedPost);
-export const deletePost = (id) => axios.delete(`${url}/${id}`);
-export const likePost = (id) => axios.patch(`${url}/${id}/likePost`);
+export const fetchBooks = () => axios.get(url);
+export const createBook = (newBook) => axios.post(url, newBook);
+export const updateBook = (id, updatedBook) => axios.patch(`${url}/${id}`, updatedBook);
+export const deleteBook = (id) => axios.delete(`${url}/${id}`);
+export const likeBook = (id) => axios.patch(`${url}/${id}/likeBook`);
 export const returnBook = (id) => axios.patch(`${url}/${id}/returnBook`);

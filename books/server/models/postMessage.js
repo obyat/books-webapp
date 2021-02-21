@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 
-const postSchema = mongoose.Schema({
+const bookSchema = mongoose.Schema({
     isbn: String,
     title: String,
     author: String,
@@ -20,5 +20,5 @@ const postSchema = mongoose.Schema({
     }
 });
 
-const postMessage = mongoose.model('PostMessage', postSchema);
+const postMessage = mongoose.model('PostMessage', bookSchema);
 export default postMessage;
