@@ -92,7 +92,7 @@ const Post = ({ post, setCurrentId }) => {
       <Typography className={classes.available} variant="body2" color="textPrimary" component="p">
           Available : {post.available}
         </Typography>
-        <Typography className={classes.copies} variant="body2" color="textSecondary">
+        <Typography className={classes.copies} variant="body2" alirgn="right" color="textSecondary">
           Copies: {post.copies}
         </Typography>
      
