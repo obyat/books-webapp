@@ -13,7 +13,7 @@ export default makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(1),
-    backgroundColor: 'rgba(99,122,125,10)',
+    backgroundColor:'rgba(75,125,135)',
     width: '260px',
     height: '100%',
     paddingBlockStart:'30px',
