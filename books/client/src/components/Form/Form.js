@@ -52,21 +52,12 @@ const Form = ({currentId, setCurrentId }) => {
 
     return (
       <Paper  className={classes.paper}>
-<<<<<<< HEAD
         <form autoComplete="off" color="red"  noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
           <Typography variant="h6">{currentId ? `Editing "${book.title}"` : 'Add a Book'}</Typography>
           <TextField name="isbn" variant="outlined" label="isbn" fullWidth value={bookData.isbn} onChange={(e) => setBookData({ ...bookData, isbn: e.target.value })} />
           <TextField name="title" variant="outlined" label="title" fullWidth value={bookData.title} onChange={(e) => setBookData({ ...bookData, title: e.target.value })} />
           <TextField name="author" variant="outlined" label="author" fullWidth value={bookData.author} onChange={(e) => setBookData({ ...bookData, author: e.target.value })} />
           <TextField name="publication_year" variant="outlined" label="publication_year" fullWidth value={bookData.publication_year} onChange={(e) => setBookData({ ...bookData, publication_year: e.target.value })} />
-=======
-        <form autoComplete="off"  noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-          <Typography variant="h6">{currentId ? `Editing "${post.title}"` : 'Add a Book'}</Typography>
-          <TextField name="isbn" variant="outlined" label="isbn" fullWidth value={postData.isbn} onChange={(e) => setPostData({ ...postData, isbn: e.target.value })} />
-          <TextField name="title" variant="outlined" label="title" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
-          <TextField name="author" variant="outlined" label="author" fullWidth value={postData.author} onChange={(e) => setPostData({ ...postData, author: e.target.value })} />
-          <TextField name="publication_year" variant="outlined" label="publication_year" fullWidth value={postData.publication_year} onChange={(e) => setPostData({ ...postData, publication_year: e.target.value })} />
->>>>>>> 29fd8fc0ad4ab0dbcf151eadf54b04a00fe8b43b
           
           <TextField name="publisher" variant="outlined" label="publisher" fullWidth value={bookData.publisher} onChange={(e) => setBookData({ ...bookData, publisher: e.target.value })} />
           <TextField name="image_url_s" variant="outlined" label="image_url_s" fullWidth value={bookData.image_url_s} onChange={(e) => setBookData({ ...bookData, image_url_s: e.target.value })} />

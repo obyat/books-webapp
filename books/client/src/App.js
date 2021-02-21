@@ -1,15 +1,8 @@
 import React, {useState, useEffect } from "react";
-<<<<<<< HEAD
-import {Container, AppBar, Typography, Grow, Grid, GridList, Button, Toolbar, IconButton, Drawer  } from "@material-ui/core";
-//importing books from components
-import Books from './components/Books/Books';
-import {getBooks} from './actions/books'
-=======
 import {Container, AppBar, Paper, TextField, Typography, Grow, Grid, GridList, Button, Toolbar, IconButton, Drawer, Divider  } from "@material-ui/core";
 //importing posts from components
-import Posts from './components/Posts/Posts';
-import {getPosts} from './actions/posts'
->>>>>>> 29fd8fc0ad4ab0dbcf151eadf54b04a00fe8b43b
+import Books from './components/Books/Books';
+import {getBooks} from './actions/books'
 import Form from './components/Form/Form';
 import useStyles from './styles';
 import{useDispatch} from 'react-redux';
@@ -94,7 +87,7 @@ return (
                 justifyContent: 'center',
                 spacing:'50'
             }} >
-          <Typography variant="h6" style={{marginBottom: 15}}fullWidth align='center'>Registeration</Typography>
+          <Typography variant="h6" style={{marginBottom: 15}}fullWidth align='center'>Registration</Typography>
 
           <TextField name="First name" variant="outlined" label="First name"  />
           <TextField name="Last name" variant="outlined" label="Last name"  />
@@ -131,15 +124,9 @@ return (
                     <Grid className={classes.mainContainer} container justify="space-between" spacing={5}>
                         
                      
-<<<<<<< HEAD
-                        <Grid cols={ 3} direction='column' item xs={3} sm={8}>
-                            <Books setCurrentId={setCurrentId}/>
-                        </Grid >
-=======
                         <GridList cols={ 3} direction='column' item xs={3} sm={8}>
-                            <Posts setCurrentId={setCurrentId}/>
+                            <Books setCurrentId={setCurrentId}/>
                         </GridList >
->>>>>>> 29fd8fc0ad4ab0dbcf151eadf54b04a00fe8b43b
                     </Grid>
                 </Container>
             </Grow>
