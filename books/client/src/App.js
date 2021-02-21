@@ -9,7 +9,7 @@ import{useDispatch} from 'react-redux';
 import birdpic from './images/birdpic.png'
 import birdpicInverted from './images/birdpicInverted.png';
 import {Menu} from '@material-ui/icons';
-const App = () => {
+import AddBoxTwoToneIcon from '@material-ui/icons/AddBoxTwoTone';const App = () => {
     //if the current id is not selected make it null
 const [currentId, setCurrentId] = useState(null);    
 const [open, setOpen] = useState(false);    
@@ -34,23 +34,23 @@ useEffect(() => {
 return (
     <div>
         <Container maxWidth="lg">
-            <AppBar position="relative" >
-                <Toolbar>
-                <IconButton edge='start' onClick={handleDrawer} color='inherit' aria-label='menu'>
-                <Menu/>
+        <AppBar
+        title="MUI Sandbox"
+    >
+                <Toolbar height="100" width="100px">
+                <IconButton edge='start' onClick={handleDrawer} edge="start" color='inherit' aria-label='menu'>
+                <AddBoxTwoToneIcon/>
                 </IconButton>
-    <Typography variant='h5' style={{flexGrow:1}}>
-        Bird
+    <Typography variant='h5'>
     </Typography>
 
                 <Button onClick={handleAccount} color='inherit'>
-                Login
             </Button>
 
 
 
             <img className={classes.image} src={birdpic} alt="birdpic" height = "60"/>
-                <Typography className={classes.heading}  variant="h2" align="center">{"  "}Coffee Shop Library {"  "}</Typography>
+                <Typography className={classes.heading}  edge="start" variant="h2" align="center">{"  "}Coffee Shop Library {"  "}</Typography>
             <img className={classes.image2} src={birdpicInverted} alt="birdpic" height = "60"/> 
      
             </Toolbar>
@@ -79,12 +79,12 @@ return (
             <Grow in>
                 <Container>
             
-                    <Grid cols={3} className={classes.mainContainer} style={{flexGrow:1}} container justify="space-between" alignItems="stretch" spacing={5}>
+                    <Grid className={classes.mainContainer} container justify="space-between" spacing={5}>
                         
                      
-                        <GridList  cols={3} item xs={12} sm={8}>
+                        <Grid cols={ 3} direction='column' item xs={3} sm={8}>
                             <Posts setCurrentId={setCurrentId}/>
-                        </GridList >
+                        </Grid >
                     </Grid>
                 </Container>
             </Grow>
@@ -92,5 +92,6 @@ return (
         </div>
     );
 }
+//to make books larger change Grid to GridList in Posts right here
 
 export default App;

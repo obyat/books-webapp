@@ -22,7 +22,6 @@ import {
   returnBook,
 } from "../../../actions/posts";
 import useStyles from "./styles";
-import { red } from '@material-ui/core/colors';
 import 'react-toastify/dist/ReactToastify.css';
 //importing bear image
 
