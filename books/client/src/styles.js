@@ -31,6 +31,8 @@ export default makeStyles((theme) => ({
  },
   [theme.breakpoints.down('sm')]: {
   mainContainer: {
+    color:"pink",
+    backgroundColor:"pink",
     // flexDirection:"column-reverse"
     
   } 

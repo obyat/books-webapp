@@ -51,8 +51,8 @@ const Form = ({currentId, setCurrentId }) => {
     };
 
     return (
-      <Paper className={classes.paper}>
-        <form autoComplete="off"  noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
+      <Paper  className={classes.paper}>
+        <form autoComplete="off" color="red"  noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
           <Typography variant="h6">{currentId ? `Editing "${post.title}"` : 'Add a Book'}</Typography>
           <TextField name="isbn" variant="outlined" label="isbn" fullWidth value={postData.isbn} onChange={(e) => setPostData({ ...postData, isbn: e.target.value })} />
           <TextField name="title" variant="outlined" label="title" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
