@@ -11,7 +11,6 @@ const classes = useStyles();
 //loops over posts/ maybe helpful in looping over books
     return (
        !posts.length ? <CircularProgress /> : (
-           <div style={{paddingBlockStart:'100px'}}>
             <Grid className={classes.container} container alignItems ="stretch" spacing={3}>
                     {posts.map((post)=> (
                         <Grid key={post._id} item xs={12} sm={6}>
@@ -19,8 +18,6 @@ const classes = useStyles();
                         </Grid>
                     ))}
             </Grid>
-            </div>
-
        )
     );
 }
