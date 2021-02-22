@@ -51,9 +51,8 @@ A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that
 * **Olubiyi Ojo** |  <a href="https://github.com/21ojoo">GitHub</a> 
 * **Dakotah Scalzi** |  <a href="https://github.com/TheOnlyFreshPrince">GitHub</a> 
 * **Adalberto Souza** |  <a href="https://github.com/adalberto1254">GitHub</a> 
-* **Eliana Lopez** |  <a href="https://github.com/elianalopez">GitHub</a> 
 * **Myriam Iralien** |  <a href="https://github.com/myriamiralien">GitHub</a> 
-
+* **Eliana Lopez** |  <a href="https://github.com/elianalopez">GitHub</a> 
 
 ### Project Overview
 #### Back-end
@@ -65,14 +64,29 @@ A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that
 
 * React displays the front end with ```axios``` to connect it to the back-end
 
+## Project Structure
+
+books
+|
++-- **client**
+|   +-- public
+|   +-- src
++-- db
+|   
++-- **server**
+|   +-- controllers
+|   +-- models
+|   +-- routes
+
+
 ## Installation & Usage
 
-clone this repositiry
+Clone this repositiry
 ```sh
-git clone https://github.com/obyat/books-webapp/.git.
+git clone https://github.com/obyat/books-webapp/.git
 ```
 
-In the **client** directory
+Within the **client** directory
 ```sh
 npm install 
 ```
