@@ -44,7 +44,7 @@ cd into client directory and enter the command: npm start. Then cd into server d
 ## Images
 
 ![Demo](Images/demo.png)
-<center><p>image of the website demo</p></center>
+<p align="center">image of the website demo</p>
 
 ## Show your support
 
