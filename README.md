@@ -88,7 +88,7 @@ Then cd into **server** directory and enter the command:
 ```sh
 npm start
 ```
-It should be running on **http://localhost:3000**
+It should be running on **http://localhost:3000 or https://birdbook.netlify.app/**
 
 <!-- cd into client directory and enter the command npm start. Then cd into server directory and enter npm start. Then see in the browser. --->
 
