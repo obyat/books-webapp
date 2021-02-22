@@ -17,7 +17,7 @@
 
 ## About
 
-A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that utilizations a MERN stack development environment to create a web application that allows coffee shop customers to loan and return books. 
+A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that utilizations a **MERN Stack development environment** to create a web application that allows coffee shop customers to loan and return books. 
 
 **Requirements of the project** view <a href="https://github.com/obyat/books-webapp/blob/main/Hack.Diversity%20de.Hackathon%20-%20Mini%20Project%20(2021).pdf
 ">page 3</a> for more details.
@@ -25,19 +25,48 @@ A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that
 * Allow coffee shop employees to add new books and edit the book stock amount
 * Add details page such as an image and book listing
 
+### Project Overview
+#### Back-end
 
+* MongoDB persists the data
+* Mongoose streamlines database interactions
 
-## Installation
+#### Front-end
 
+* React displays the front end with ```axios``` to connect it to the back-end
+
+## Installation & Usage
+
+clone this repositiry
 ```sh
-npm install in the server directory, then in the client directory.
+git clone https://github.com/obyat/books-webapp/.git.
 ```
 
-## Usage
+In the **client** directory
+```sh
+npm install in the server directory.
+```
+
+cd into **client** directory and enter the command:
 
 ```sh
-cd into client directory and enter the command: npm start. Then cd into server directory and enter npm start. Then see in the browser.
+npm start
 ```
+
+Then cd into **server** directory and enter the command:
+
+```sh
+npm start. Then cd into server directory and enter npm start. Then see in the browser.
+```
+Go to **http://localhost:3000**
+
+<!-- cd into client directory and enter the command npm start. Then cd into server directory and enter npm start. Then see in the browser. --->
+
+Client side output
+```Server Running on Port: http://localhost:3000```
+
+Server side output
+```Server Running on Port: http://localhost:5000```
 
 ## Authors
 
