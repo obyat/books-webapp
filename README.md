@@ -66,17 +66,8 @@ A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that
 
 ## Project Structure
 
-books
-|
-+-- **client**
-|   +-- public
-|   +-- src
-+-- db
-|   
-+-- **server**
-|   +-- controllers
-|   +-- models
-|   +-- routes
+![structure](Images/structure.png)
+
 
 
 ## Installation & Usage
