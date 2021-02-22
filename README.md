@@ -40,14 +40,16 @@ A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that
 * Allow coffee shop employees to add new books and edit the book stock amount
 * Add details page such as an image and book listing
 
-## Authors
+## Authors 👤
 
+<!-- Original
 👤 **Obyat Abdelrahman, Olubiyi Ojo, Dakotah Scalzi, Eliana Lopez, and Myriam Iralien** 👤
-
 * Website: https://www.linkedin.com/in/obyat
 * Github: [@Obyat](https://github.com/Obyat)
 * LinkedIn: [@Abdelrahman Obyat](https://linkedin.com/in/Abdelrahman Obyat)
+--->
 
+* **Obyat Abdelrahman** | <a href="https://github.com/Obyat">GitHub</a> <a href="https://linkedin.com/in/Abdelrahman Obyat">LinkedIn</a> 
 * **Olubiyi Ojo** |  <a href="https://github.com/21ojoo">GitHub</a> 
 * **Dakotah Scalzi** |  <a href="https://github.com/TheOnlyFreshPrince">GitHub</a> 
 * **Adalberto Souza** |  <a href="https://github.com/adalberto1254">GitHub</a> 
