@@ -11,6 +11,21 @@
 
 > Books Web App
 
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents  
+<!-- AUTO-GENERATED-CONTENT:START (TOC:collapse=true&collapseText="Click to expand") -->
+<details>
+<summary>click to expand</summary>
+ 
+- [About](#About)  
+- [Authors](#Authors)  
+- [Project Overview](#Project-Overview)  
+- [Installation & Usage](#Installation--Usage)  
+- [Images](#images)  
+</details>
+<!-- AUTO-GENERATED-CONTENT:END -->
+
 ### 🏠 [Homepage](https://github.com/obyat/books-webapp)
 
 ### ✨ [Demo](https://birdbook.netlify.app/)
@@ -24,6 +39,21 @@ A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that
 * Have a web page that allows customers to view a list of currently available books and allows them to borrow and return books
 * Allow coffee shop employees to add new books and edit the book stock amount
 * Add details page such as an image and book listing
+
+## Authors
+
+👤 **Obyat Abdelrahman, Olubiyi Ojo, Dakotah Scalzi, Eliana Lopez, and Myriam Iralien** 👤
+
+* Website: https://www.linkedin.com/in/obyat
+* Github: [@Obyat](https://github.com/Obyat)
+* LinkedIn: [@Abdelrahman Obyat](https://linkedin.com/in/Abdelrahman Obyat)
+
+* **Olubiyi Ojo** |  <a href="https://github.com/21ojoo">GitHub</a> 
+* **Dakotah Scalzi** |  <a href="https://github.com/TheOnlyFreshPrince">GitHub</a> 
+* **Adalberto Souza** |  <a href="https://github.com/adalberto1254">GitHub</a> 
+* **Eliana Lopez** |  <a href="https://github.com/elianalopez">GitHub</a> 
+* **Myriam Iralien** |  <a href="https://github.com/myriamiralien">GitHub</a> 
+
 
 ### Project Overview
 #### Back-end
@@ -58,7 +88,7 @@ Then cd into **server** directory and enter the command:
 ```sh
 npm start
 ```
-Go to **http://localhost:3000**
+It should be running on **http://localhost:3000**
 
 <!-- cd into client directory and enter the command npm start. Then cd into server directory and enter npm start. Then see in the browser. --->
 
@@ -68,19 +98,6 @@ Client side output
 Server side output
 ```Server Running on Port: http://localhost:5000```
 
-## Authors
-
-👤 **Obyat Abdelrahman, Olubiyi Ojo, Dakotah Scalzi, Eliana Lopez, and Myriam Iralien** 👤
-
-* Website: https://www.linkedin.com/in/obyat
-* Github: [@Obyat](https://github.com/Obyat)
-* LinkedIn: [@Abdelrahman Obyat](https://linkedin.com/in/Abdelrahman Obyat)
-
-* **Olubiyi Ojo** |  <a href="https://github.com/21ojoo">GitHub</a> 
-* **Dakotah Scalzi** |  <a href="https://github.com/TheOnlyFreshPrince">GitHub</a> 
-* **Adalberto Souza** |  <a href="https://github.com/adalberto1254">GitHub</a> 
-* **Eliana Lopez** |  <a href="https://github.com/elianalopez">GitHub</a> 
-* **Myriam Iralien** |  <a href="https://github.com/myriamiralien">GitHub</a> 
 
 ## Images
 
