@@ -29,12 +29,17 @@ cd into client directory and enter the command: npm start. Then cd into server d
 
 ## Authors
 
-👤 **Obyat Abdelrahman, Olubiyi Ojo, Eliana Lopez**
+👤 **Obyat Abdelrahman, Olubiyi Ojo, Dakotah Scalzi, Eliana Lopez, and Myriam Iralien** 👤
 
 * Website: https://www.linkedin.com/in/obyat
 * Github: [@Obyat](https://github.com/Obyat)
 * LinkedIn: [@Abdelrahman Obyat](https://linkedin.com/in/Abdelrahman Obyat)
 
+* **Olubiyi Ojo** |  <a href="https://github.com/21ojoo">GitHub</a> 
+* **Dakotah Scalzi** |  <a href="https://github.com/TheOnlyFreshPrince">GitHub</a> 
+* **Adalberto Souza** |  <a href="https://github.com/adalberto1254">GitHub</a> 
+* **Eliana Lopez** |  <a href="https://github.com/elianalopez">GitHub</a> 
+* **Myriam Iralien** |  <a href="https://github.com/myriamiralien">GitHub</a> 
 
 ## Images
 
