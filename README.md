@@ -29,7 +29,7 @@ cd into client directory and enter the command: npm start. Then cd into server d
 
 ## Author
 
-👤 **Obyat Abdelrahman, Olubiyi Ojo, Eliana Lopezez**
+👤 **Obyat Abdelrahman, Olubiyi Ojo, Eliana Lopez**
 
 * Website: https://www.linkedin.com/in/obyat
 * Github: [@Obyat](https://github.com/Obyat)
