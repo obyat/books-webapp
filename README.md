@@ -49,7 +49,7 @@ A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that
 * LinkedIn: [@Abdelrahman Obyat](https://linkedin.com/in/Abdelrahman Obyat)
 --->
 
-* **Obyat Abdelrahman** | <a href="https://github.com/Obyat">GitHub</a> <a href="https://linkedin.com/in/Abdelrahman Obyat">LinkedIn</a> 
+* **Obyat Abdelrahman** | <a href="https://github.com/Obyat">GitHub</a> | <a href="https://linkedin.com/in/Abdelrahman Obyat">LinkedIn</a> 
 * **Olubiyi Ojo** |  <a href="https://github.com/21ojoo">GitHub</a> 
 * **Dakotah Scalzi** |  <a href="https://github.com/TheOnlyFreshPrince">GitHub</a> 
 * **Adalberto Souza** |  <a href="https://github.com/adalberto1254">GitHub</a> 
