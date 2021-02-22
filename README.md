@@ -46,6 +46,10 @@ cd into client directory and enter the command: npm start. Then cd into server d
 ![Demo](Images/demo.png)
 <p align="center">image of the website demo</p>
 
+![bookSchema](Images/bookSchema.png)
+<p align="center">Book Schema</p>
+
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
