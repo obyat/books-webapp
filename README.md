@@ -46,7 +46,8 @@ cd into client directory and enter the command: npm start. Then cd into server d
 ![Demo](Images/demo.png)
 <p align="center">image of the website demo</p>
 
-![bookSchema](Images/bookSchema.png)
+<p align="center"><img src="https://raw.githubusercontent.com/obyat/books-webapp/main/Images/bookSchema.png" width="100%" height="100%"></p>
+
 <p align="center">Book Schema</p>
 
 
