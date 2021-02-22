@@ -38,7 +38,7 @@
 A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that utilizations a **MERN Stack development environment** to create a web application that allows coffee shop customers to loan and return books. 
 
 ### Try it out!
-#### ✨ [Demo](https://birdbook.netlify.app/)
+#### ✨ [Demo](https://birdbook.netlify.app/) ✨
 
 **Requirements of the project** view <a href="https://github.com/obyat/books-webapp/blob/main/Hack.Diversity%20de.Hackathon%20-%20Mini%20Project%20(2021).pdf
 ">page 3</a> for more details.
