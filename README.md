@@ -27,13 +27,18 @@ npm install in the server directory, then in the client directory.
 cd into client directory and enter the command: npm start. Then cd into server directory and enter npm start. Then see in the browser.
 ```
 
-## Author
+## Authors
 
 👤 **Obyat Abdelrahman, Olubiyi Ojo, Eliana Lopez**
 
 * Website: https://www.linkedin.com/in/obyat
 * Github: [@Obyat](https://github.com/Obyat)
 * LinkedIn: [@Abdelrahman Obyat](https://linkedin.com/in/Abdelrahman Obyat)
+
+
+## Images
+
+![Demo](Images/demo.png)
 
 ## Show your support
 
