@@ -64,7 +64,7 @@ A <a href="https://www.hackdiversity.com/">Hack.Diversity</a>  mini-project that
 
 * React displays the front end with ```axios``` to connect it to the back-end
 
-## Project Structure
+#### Project Structure
 
 ![structure](Images/structure.png)
 
