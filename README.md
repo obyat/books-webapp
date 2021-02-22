@@ -44,7 +44,7 @@ git clone https://github.com/obyat/books-webapp/.git.
 
 In the **client** directory
 ```sh
-npm install in the server directory.
+npm install 
 ```
 
 cd into **client** directory and enter the command:
@@ -56,7 +56,7 @@ npm start
 Then cd into **server** directory and enter the command:
 
 ```sh
-npm start. Then cd into server directory and enter npm start. Then see in the browser.
+npm start
 ```
 Go to **http://localhost:3000**
 
